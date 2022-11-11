@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Page from "../../components/Page";
 import Portals from "../../components/Portal";
 import ResponseModal from "../../components/Modals/ResponseModal";
-import Form from "../../components/Form";
+import CSVForm from "../../components/Form";
 import { useRouter } from "next/router";
 export default function Uid() {
   const router = useRouter();
@@ -24,7 +24,7 @@ export default function Uid() {
   return (
     <Page title={`Results | ${path}`}>
       <div>
-        <Form content={content} onSubmitForm={onSubmitHandler} />
+        <CSVForm content={content} onSubmitForm={onSubmitHandler} />
         {resp && (
           <Portals>
             <ResponseModal

@@ -1,7 +1,20 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { parseAsString } from "../../lib/utils/tsv2json";
 import style from "./Form.module.css";
-export default function (props) {
+export default function CSVForm(props) {
+  const onSubmitHandler = async (values) => {
+    let resp = {};
+    let error = {};
+    try {
+      const response = await parseAsString(values);
+      resp = response.json;
+      error = response.error;
+    } catch (e) {
+      console.log(e.message);
+      // error = e;
+    }
+    props.onSubmitForm(resp, error, values.content);
+  };
   return (
     <>
       <Formik
@@ -15,19 +28,7 @@ export default function (props) {
           return errors;
         }}
         //separte func
-        onSubmit={async (values) => {
-          let resp = {};
-          let error = {};
-          try {
-            const response = await parseAsString(values);
-            resp = response.json;
-            error = response.error;
-          } catch (e) {
-            console.log(e.message);
-            // error = e;
-          }
-          props.onSubmitForm(resp, error, values.content);
-        }}
+        onSubmit={onSubmitHandler}
       >
         {({ isSubmitting }) => (
           <Form className={style.container}>

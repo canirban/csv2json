@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Form from "../components/Form";
+import CSVForm from "../components/Form";
 import ResponseModal from "../components/Modals/ResponseModal";
 import Page from "../components/Page";
 import Portals from "../components/Portal";
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <Page title="Home">
       <div>
-        <Form onSubmitForm={onSubmitHandler} />
+        <CSVForm onSubmitForm={onSubmitHandler} />
         {resp && (
           <Portals>
             <ResponseModal
