@@ -17,9 +17,6 @@ export default function Home() {
     const pageId = nextId();
     setUrl(BaseUrl + pageId);
     localStorage.setItem(pageId, JSON.stringify({ resp, error, content }));
-    //console.log(localStorage)
-    //localStorage.setItem(pageId + "-error", JSON.stringify(error));
-    //localStorage.setItem(pageId + "-content", JSON.stringify(content));
   };
   return (
     <Page title="Home">
