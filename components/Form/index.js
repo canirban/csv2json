@@ -30,7 +30,7 @@ export default function CSVForm(props) {
         //separte func
         onSubmit={onSubmitHandler}
       >
-        {({ isSubmitting }) => (
+        {() => (
           <Form className={style.container}>
             <label className={style.label} htmlFor="content">
               TSV Content
@@ -48,11 +48,7 @@ export default function CSVForm(props) {
               name="content"
               component="div"
             />
-            <button
-              className={style.button}
-              type="submit"
-              onClick={isSubmitting ? () => false : null}
-            >
+            <button className={style.button} type="submit">
               Submit
             </button>
           </Form>
