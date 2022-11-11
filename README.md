@@ -23,6 +23,6 @@ If its a GET call then the file data.csv will be imported and JSON be displayed 
 
 Note please add NEXT_PUBLIC_RESULT_URL=your-site-url/results/ to .env.local if your server is not running on [http://localhost:3000](http://localhost:3000)
 
-App is hosted here as well to test [csv2json-zem6.vercel.app](csv2json-zem6.vercel.app)
+App is hosted here as well to test [https://csv2json-zem6.vercel.app](https://csv2json-zem6.vercel.app)
 
 # csv2json
