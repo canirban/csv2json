@@ -22,4 +22,6 @@ If its a POST request you can put your own payload to test the api make sure to 
 
 Note please add NEXT_PUBLIC_RESULT_URL=your-site-url/results/ to .env.local if your server is not running on [http://localhost:3000](http://localhost:3000)
 
+App is hosted here as well to test [csv2json-zem6.vercel.app](csv2json-zem6.vercel.app)
+
 # csv2json
