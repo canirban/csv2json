@@ -44,7 +44,7 @@
   border-radius: var(--size-spacing-5);
   margin-top: var(--size-spacing-100);
   float: right;
-  font-size: var();
+  font-size: var(--size-spacing-100);
 }
 
 .button:hover,
