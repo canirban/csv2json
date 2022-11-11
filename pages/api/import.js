@@ -1,7 +1,16 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { parseAsStringForAPI } from "../../lib/utils/tsv2json";
+import { parseAsFile, parseAsStringForAPI } from "../../lib/utils/tsv2json";
 export default async function handler(req, res) {
-  if (req.method == "POST") {
+  if (req.method == "GET") {
+    try {
+      const result = await parseAsFile("data.csv");
+      result
+        ? res.status(200).json(result)
+        : res.status(500).json("Import Failed");
+    } catch (e) {
+      res.status(500).json(`Import failed. Reason :${e.message}`);
+    }
+  } else if (req.method == "POST") {
     try {
       const result = await parseAsStringForAPI(req.body?.csv);
       result
