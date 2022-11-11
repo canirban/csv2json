@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import Page from "../../components/Page";
-import Portals from "../../components/Portal";
-import ResponseModal from "../../components/Modals/ResponseModal";
-import CSVForm from "../../components/Form";
-import { useRouter } from "next/router";
+import { useEffect, useState } from 'react';
+import Page from '../../components/Page';
+import Portals from '../../components/Portal';
+import ResponseModal from '../../components/Modals/ResponseModal';
+import CSVForm from '../../components/Form';
+import { useRouter } from 'next/router';
 export default function Uid() {
   const router = useRouter();
-  const path = router.asPath.split("/")?.slice(-1)?.join("");
-  const [resp, setResp] = useState("");
-  const [error, setError] = useState({ message: "" });
-  const [content, setContent] = useState("");
+  const path = router.asPath.split('/')?.slice(-1)?.join('');
+  const [resp, setResp] = useState('');
+  const [error, setError] = useState({ message: '' });
+  const [content, setContent] = useState('');
   useEffect(() => {
     const json = JSON.parse(localStorage.getItem(path));
     setResp(json?.resp);
@@ -31,7 +31,7 @@ export default function Uid() {
               error={error}
               resp={resp}
               toggleResponse={() => {
-                setResp("");
+                setResp('');
               }}
             />
           </Portals>

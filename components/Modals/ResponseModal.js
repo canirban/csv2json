@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import classes from "./ResponseModal.module.css";
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import classes from './ResponseModal.module.css';
 
 const Modal = (props) => {
-  const [copy, setCopy] = useState("Copy Url");
+  const [copy, setCopy] = useState('Copy Url');
 
   return (
     <>
@@ -21,7 +21,7 @@ const Modal = (props) => {
         {props.error.message && (
           <div className={classes.content}>
             <h2>Errors</h2>
-            {props.error.message.split("\n").map((str) => (
+            {props.error.message.split('\n').map((str) => (
               <p key={str}>{str}</p>
             ))}
           </div>
@@ -33,7 +33,7 @@ const Modal = (props) => {
               className={classes.button}
               onClick={() => {
                 navigator.clipboard.writeText(props.url);
-                setCopy("Copied!");
+                setCopy('Copied!');
               }}
             >
               {copy}

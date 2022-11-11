@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
-import style from "./Page.module.css";
+import Head from 'next/head';
+import Link from 'next/link';
+import style from './Page.module.css';
 const Page = ({ title, children }) => {
   return (
     <>
@@ -15,7 +15,7 @@ const Page = ({ title, children }) => {
       </header>
       <main className={style.main}>{children}</main>
       <footer className={style.footer}>
-        <Link href={"https://www.linkedin.com/in/anirbanc17"}>
+        <Link href={'https://www.linkedin.com/in/anirbanc17'}>
           &copy; Anirban
         </Link>
       </footer>

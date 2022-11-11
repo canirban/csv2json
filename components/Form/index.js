@@ -1,6 +1,6 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
-import { parseAsString } from "../../lib/utils/tsv2json";
-import style from "./Form.module.css";
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { parseAsString } from '../../lib/utils/tsv2json';
+import style from './Form.module.css';
 export default function CSVForm(props) {
   const onSubmitHandler = async (values) => {
     let resp = {};
@@ -23,7 +23,7 @@ export default function CSVForm(props) {
         validate={(values) => {
           const errors = {};
           if (!values.content) {
-            errors.content = "This is a Required field";
+            errors.content = 'This is a Required field';
           }
           return errors;
         }}

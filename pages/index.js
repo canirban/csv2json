@@ -1,15 +1,15 @@
-import { useState } from "react";
-import CSVForm from "../components/Form";
-import ResponseModal from "../components/Modals/ResponseModal";
-import Page from "../components/Page";
-import Portals from "../components/Portal";
-import nextId from "react-id-generator";
-import BaseUrl from "../lib/utils/url";
+import { useState } from 'react';
+import CSVForm from '../components/Form';
+import ResponseModal from '../components/Modals/ResponseModal';
+import Page from '../components/Page';
+import Portals from '../components/Portal';
+import nextId from 'react-id-generator';
+import BaseUrl from '../lib/utils/url';
 export default function Home() {
-  const [resp, setResp] = useState("");
-  const [error, setError] = useState({ message: "" });
-  const [content, setContent] = useState("");
-  const [url, setUrl] = useState("");
+  const [resp, setResp] = useState('');
+  const [error, setError] = useState({ message: '' });
+  const [content, setContent] = useState('');
+  const [url, setUrl] = useState('');
   const onSubmitHandler = (resp, error, content) => {
     setResp(resp);
     setError(error);
@@ -31,7 +31,7 @@ export default function Home() {
               error={error}
               resp={resp}
               toggleResponse={() => {
-                setResp("");
+                setResp('');
               }}
               url={url}
             />
