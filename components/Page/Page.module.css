@@ -8,7 +8,7 @@
   text-align: center;
 }
 .main {
-  height: var(--size-height-80);
+  min-height: var(--size-height-80);
   background: var(--color-green-lighter);
 }
 .footer {
