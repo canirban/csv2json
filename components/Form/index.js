@@ -10,8 +10,7 @@ export default function CSVForm(props) {
       resp = response.json;
       error = response.error;
     } catch (e) {
-      console.log(e.message);
-      // error = e;
+      error = e;
     }
     props.onSubmitForm(resp, error, values.content);
   };
